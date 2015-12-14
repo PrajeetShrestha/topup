@@ -12,6 +12,7 @@
 #import <pop/POP.h>
 #import "PJModalView.h"
 #import "AddNewNetworkViewController.h"
+#import "OCRController.h"
 
 @interface NetworkSelectionViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

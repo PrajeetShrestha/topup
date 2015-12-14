@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *networkID = [userDefault objectForKey:@"NetworkID"];
+    NSString *networkID = [userDefault objectForKey:kSavedNetworkID];
     UIViewController *controller;
     if (networkID != nil) {
         controller = [mainStoryboard instantiateViewControllerWithIdentifier:@"OCRController"];

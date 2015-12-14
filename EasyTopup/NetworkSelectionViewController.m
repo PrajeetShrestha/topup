@@ -8,44 +8,23 @@
 
 #import "NetworkSelectionViewController.h"
 @interface NetworkSelectionViewController()
-@property (nonatomic) NSString *networkID;
+@property (nonatomic) Network *selectedNetwork;
 @end
 
 @implementation NetworkSelectionViewController
+#pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     _rememberNetwork.transform = CGAffineTransformMakeScale(0.75, 0.75);
-    _listOfNetwork = [NSMutableArray new];
-    
-    Network *ntcPostPaid = [Network new];
-    ntcPostPaid.name = @"NTC Post Paid";
-    ntcPostPaid.prefix = @"*411*";
-    ntcPostPaid.suffix = @"*10#";
-    ntcPostPaid.networkID = @"ntcpostpaid";
-    ntcPostPaid.isSelected = NO;
-    [_listOfNetwork addObject:ntcPostPaid];
-    
-    
-    Network *ntcPrePaid = [Network new];
-    ntcPrePaid.name = @"NTC Pre Paid";
-    ntcPrePaid.prefix = @"*411*";
-    ntcPrePaid.suffix = @"*10#";
-    ntcPrePaid.networkID = @"ntcprepaid";
-    ntcPrePaid.isSelected = NO;
-    [_listOfNetwork addObject:ntcPrePaid];
-    
+    _listOfNetwork = [self listOfNetwork];
     [self setNavigationBar];
-    
-    
 }
-
+#pragma mark - Private Methods
 - (void)setNavigationBar {
     UIBarButtonItem *doneButton       = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
-    
     UIBarButtonItem *addButton       = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNetwork)];
     self.navigationItem.rightBarButtonItems = @[doneButton,addButton];
 }
-
 
 - (void)addNetwork {
     PJModalView *popUp  = [PJModalView new];
@@ -63,13 +42,39 @@
     //[self addNetwork];
     if (_rememberNetwork.isOn) {
         NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-        [userDefault setObject:_networkID forKey:@"NetworkID"];
+        [userDefault setObject:_selectedNetwork.networkID forKey:kSavedNetworkID];
         [userDefault synchronize];
     }
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"OCRController"];
+    OCRController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"OCRController"];
+    controller.selectedNetwork   = _selectedNetwork ;
     [self.navigationController showViewController:controller sender:nil];
 }
 
+- (NSMutableArray *)listOfNetworks {
+    NSMutableArray *networks = [NSMutableArray new];
+    Network *ntcPostPaid = [Network new];
+    ntcPostPaid.name = @"NTC Post Paid";
+    ntcPostPaid.prefix = @"*411*";
+    ntcPostPaid.suffix = @"*10#";
+    ntcPostPaid.networkID = @"ntcpostpaid";
+    ntcPostPaid.isSelected = NO;
+    [networks addObject:ntcPostPaid];
+    
+    Network *ntcPrePaid = [Network new];
+    ntcPrePaid.name = @"NTC Pre Paid";
+    ntcPrePaid.prefix = @"*411*";
+    ntcPrePaid.suffix = @"*10#";
+    ntcPrePaid.networkID = @"ntcprepaid";
+    ntcPrePaid.isSelected = NO;
+    [networks addObject:ntcPrePaid];
+    
+    return networks;
+}
+
+- (IBAction)rememberNetworkAction:(id)sender {
+}
+
+#pragma - mark TableView Delegates
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _listOfNetwork.count;
 }
@@ -91,15 +96,11 @@
     for (Network *network in _listOfNetwork) {
         if (indexPath.row == network.order) {
             network.isSelected = YES;
-            _networkID = network.networkID;
+            _selectedNetwork = network;
         } else {
             network.isSelected = NO;
         }
     }
     [tableView reloadData];
-}
-
-
-- (IBAction)rememberNetworkAction:(id)sender {
 }
 @end

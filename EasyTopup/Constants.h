@@ -9,5 +9,11 @@
 #ifndef Constants_h
 #define Constants_h
 
+/*
+ User Default Constants
+ */
+
+// This key is used to store the network ID if user selects the remember option for the network.
+#define kSavedNetworkID @"NetworkID"
 
 #endif /* Constants_h */

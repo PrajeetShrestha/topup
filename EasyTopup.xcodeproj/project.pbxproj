@@ -27,6 +27,7 @@
 		4AF6346B1C1E96D900C931BF /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6346A1C1E96D900C931BF /* Network.m */; };
 		4AF6346F1C1E996500C931BF /* NetworkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6346E1C1E996500C931BF /* NetworkCell.m */; };
 		4AF634711C1E9A3B00C931BF /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AF634701C1E9A3B00C931BF /* tick.png */; };
+		B676D2041C1F54940029BD01 /* CallController.m in Sources */ = {isa = PBXBuildFile; fileRef = B676D2031C1F54940029BD01 /* CallController.m */; };
 		B67F68401C1F2CA000187D3F /* PJModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F683E1C1F2CA000187D3F /* PJModalView.m */; };
 		B67F68411C1F2CA000187D3F /* PJModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67F683F1C1F2CA000187D3F /* PJModalView.xib */; };
 		B67F68441C1F395300187D3F /* AddNewNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F68431C1F395300187D3F /* AddNewNetworkViewController.m */; };
@@ -84,6 +85,8 @@
 		4AF6346E1C1E996500C931BF /* NetworkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCell.m; sourceTree = "<group>"; };
 		4AF634701C1E9A3B00C931BF /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
 		8C93069BC750A8429970F7FA /* Pods-EasyTopup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTopup.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTopup/Pods-EasyTopup.release.xcconfig"; sourceTree = "<group>"; };
+		B676D2021C1F54940029BD01 /* CallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallController.h; sourceTree = "<group>"; };
+		B676D2031C1F54940029BD01 /* CallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallController.m; sourceTree = "<group>"; };
 		B67F68361C1F287B00187D3F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B67F68371C1F28C200187D3F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		B67F683D1C1F2CA000187D3F /* PJModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJModalView.h; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 				4ADFF62D1C1996EC00B1CBE1 /* OCRController.m */,
 				B67F68421C1F395300187D3F /* AddNewNetworkViewController.h */,
 				B67F68431C1F395300187D3F /* AddNewNetworkViewController.m */,
+				B676D2021C1F54940029BD01 /* CallController.h */,
+				B676D2031C1F54940029BD01 /* CallController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				4AF6346B1C1E96D900C931BF /* Network.m in Sources */,
 				4AD153311C1952190088A3BB /* main.m in Sources */,
 				4AF6346F1C1E996500C931BF /* NetworkCell.m in Sources */,
+				B676D2041C1F54940029BD01 /* CallController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

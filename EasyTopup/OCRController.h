@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <TesseractOCR/TesseractOCR.h>
 #import "ImageCropView.h"
-
+#import "Network.h"
 #import "AppDelegate.h"
+#import "PJModalView.h" 
+#import "CallController.h"
 
 @interface OCRController : UIViewController<G8TesseractDelegate,ImageCropViewControllerDelegate,
 UIImagePickerControllerDelegate,
@@ -19,6 +21,7 @@ UINavigationControllerDelegate>
 @property (nonatomic) UIImage *croppedImage;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic) Network *selectedNetwork;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *scanButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;

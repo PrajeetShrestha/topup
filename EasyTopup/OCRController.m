@@ -79,7 +79,7 @@
     operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
         // Fetch the recognized text
         NSString *recognizedText = tesseract.recognizedText;
-        NSLog(@"Recognized Text %@",recognizedText);
+        [self showCallDialogWithExtractedPinCode:recognizedText];
 //        [self filterText:recognizedText];
     };
     
@@ -89,6 +89,21 @@
     // Finally, add the recognition operation to the queue
     [self.operationQueue addOperation:operation];
 }
+
+
+
+- (void)showCallDialogWithExtractedPinCode:(NSString *)pinCode {
+    
+    PJModalView *popUp  = [PJModalView new];
+    popUp.fixedHeight = @246;
+    popUp.leadingSpaceToSuperView  = @16;
+    popUp.trailingSpaceToSuperView = @16;
+    CallController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CallController"];
+    controller.modalView = popUp;
+    controller.selectedNetwork = _selectedNetwork;
+    controller.extractedPinCode = pinCode;
+    [popUp showPopUpWithContainerController:controller];
+}
 /**
  *  This function is part of Tesseract's delegate. It will be called
  *  periodically as the recognition happens so you can observe the progress.
@@ -96,7 +111,7 @@
  *  @param tesseract The `G8Tesseract` object performing the recognition.
  */
 - (void)progressImageRecognitionForTesseract:(G8Tesseract *)tesseract {
-    NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
+   // NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
 }
 
 /**
