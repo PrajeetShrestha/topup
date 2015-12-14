@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Network.h"
 #import "NetworkCell.h"
+#import <pop/POP.h>
+#import "PJModalView.h"
+#import "AddNewNetworkViewController.h"
 
 @interface NetworkSelectionViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISwitch *rememberNetwork;
+- (IBAction)rememberNetworkAction:(id)sender;
+
 @property (nonatomic) NSMutableArray *listOfNetwork;
 
 @end

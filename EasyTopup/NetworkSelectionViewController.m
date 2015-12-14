@@ -7,6 +7,9 @@
 //
 
 #import "NetworkSelectionViewController.h"
+@interface NetworkSelectionViewController()
+@property (nonatomic) NSString *networkID;
+@end
 
 @implementation NetworkSelectionViewController
 - (void)viewDidLoad {
@@ -38,13 +41,33 @@
 
 - (void)setNavigationBar {
     UIBarButtonItem *doneButton       = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
-    self.navigationItem.rightBarButtonItems = @[doneButton];
+    
+    UIBarButtonItem *addButton       = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNetwork)];
+    self.navigationItem.rightBarButtonItems = @[doneButton,addButton];
 }
 
 
+- (void)addNetwork {
+    PJModalView *popUp  = [PJModalView new];
+    popUp.fixedHeight = @246;
+    popUp.leadingSpaceToSuperView  = @16;
+    popUp.trailingSpaceToSuperView = @16;
+    UIStoryboard *findsStory = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    AddNewNetworkViewController *controller = [findsStory instantiateViewControllerWithIdentifier:@"AddNewNetworkViewController"];
+    controller.modalView = popUp;
+    [popUp showPopUpWithContainerController:controller];
+}
+
 - (void)done {
     //Check if user has enabled save password option
-    [self.navigationController performSegueWithIdentifier:@"OCRController" sender:nil];
+    //[self addNetwork];
+    if (_rememberNetwork.isOn) {
+        NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+        [userDefault setObject:_networkID forKey:@"NetworkID"];
+        [userDefault synchronize];
+    }
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"OCRController"];
+    [self.navigationController showViewController:controller sender:nil];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -68,6 +91,7 @@
     for (Network *network in _listOfNetwork) {
         if (indexPath.row == network.order) {
             network.isSelected = YES;
+            _networkID = network.networkID;
         } else {
             network.isSelected = NO;
         }
@@ -76,4 +100,6 @@
 }
 
 
+- (IBAction)rememberNetworkAction:(id)sender {
+}
 @end

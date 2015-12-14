@@ -19,18 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *networkID = [userDefault objectForKey:@"NetworkID"];
+    UIViewController *controller;
+    if (networkID != nil) {
+        controller = [mainStoryboard instantiateViewControllerWithIdentifier:@"OCRController"];
+    } else {
+        controller = [mainStoryboard instantiateViewControllerWithIdentifier:@"NetworkSelectionViewController"];
+    }
+    UINavigationController *navigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:controller];
     
-    NetworkSelectionViewController *myViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"NetworkSelectionViewController"];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window.rootViewController = navigationController;
     
-    OCRController *controller = [mainStoryboard instantiateViewControllerWithIdentifier:@"OCRController"];
-    
-    
-//    navigationController = [[UINavigationController alloc]
-//                            initWithRootViewController:myViewController];
-//    
-//    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    window.rootViewController = navigationController;
-//    [window makeKeyAndVisible];
+    [_window makeKeyAndVisible];
     return YES;
 }
 

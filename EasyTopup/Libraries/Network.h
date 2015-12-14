@@ -14,7 +14,7 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *prefix;
 @property (nonatomic) NSString *suffix;
-@property (nonatomic) CGFloat order;
+@property (nonatomic) CGFloat   order;
 @property (nonatomic) BOOL      isSelected;
 
 @end

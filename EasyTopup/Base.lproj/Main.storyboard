@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d02-tO-ukR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d02-tO-ukR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -7,6 +7,100 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Add New Network View Controller-->
+        <scene sceneID="bnu-9Q-QJL">
+            <objects>
+                <viewController storyboardIdentifier="AddNewNetworkViewController" id="aMJ-VE-Kqo" customClass="AddNewNetworkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JOX-Vf-bzV"/>
+                        <viewControllerLayoutGuide type="bottom" id="zzT-T9-Zca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Cj-8K-Axl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogG-F3-g7v">
+                                <rect key="frame" x="24" y="57" width="327" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prefix" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ba1-xQ-jIG">
+                                <rect key="frame" x="24" y="95" width="327" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Suffix" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HeB-BP-2ij">
+                                <rect key="frame" x="24" y="133" width="327" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new network:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-AL-CIn">
+                                <rect key="frame" x="24" y="28" width="138" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Save?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-At-Dcq">
+                                <rect key="frame" x="24" y="179" width="111" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZ2-MM-sl3">
+                                <rect key="frame" x="302" y="174" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="confirmAction:" destination="aMJ-VE-Kqo" eventType="valueChanged" id="2JC-4m-YMO"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sb-CJ-6tf">
+                                <rect key="frame" x="24" y="220" width="327" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vZ2-MM-sl3" firstAttribute="centerY" secondItem="4zg-At-Dcq" secondAttribute="centerY" id="76t-bq-7SU"/>
+                            <constraint firstItem="HeB-BP-2ij" firstAttribute="leading" secondItem="Ba1-xQ-jIG" secondAttribute="leading" id="888-Vu-2O6"/>
+                            <constraint firstItem="6sb-CJ-6tf" firstAttribute="leading" secondItem="4zg-At-Dcq" secondAttribute="leading" id="9qm-aS-QnX"/>
+                            <constraint firstItem="6sb-CJ-6tf" firstAttribute="trailing" secondItem="vZ2-MM-sl3" secondAttribute="trailing" id="K2p-Wi-lzM"/>
+                            <constraint firstItem="HeB-BP-2ij" firstAttribute="trailing" secondItem="Ba1-xQ-jIG" secondAttribute="trailing" id="MGN-Ah-sVJ"/>
+                            <constraint firstItem="4zg-At-Dcq" firstAttribute="top" secondItem="HeB-BP-2ij" secondAttribute="bottom" constant="16" id="Nuz-Rx-Nun"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ba1-xQ-jIG" secondAttribute="leading" constant="-8" id="Yl8-R6-3qu"/>
+                            <constraint firstItem="Wds-AL-CIn" firstAttribute="leading" secondItem="ogG-F3-g7v" secondAttribute="leading" id="cND-OF-Dxt"/>
+                            <constraint firstItem="ogG-F3-g7v" firstAttribute="leading" secondItem="Ba1-xQ-jIG" secondAttribute="leading" id="cSL-9r-FKD"/>
+                            <constraint firstItem="ogG-F3-g7v" firstAttribute="trailing" secondItem="Ba1-xQ-jIG" secondAttribute="trailing" id="dss-dm-orJ"/>
+                            <constraint firstItem="4zg-At-Dcq" firstAttribute="leading" secondItem="HeB-BP-2ij" secondAttribute="leading" id="gcX-1J-Hmn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ba1-xQ-jIG" secondAttribute="trailing" constant="8" id="jAh-ic-873"/>
+                            <constraint firstItem="HeB-BP-2ij" firstAttribute="top" secondItem="Ba1-xQ-jIG" secondAttribute="bottom" constant="8" id="ktv-Kr-BsT"/>
+                            <constraint firstItem="ogG-F3-g7v" firstAttribute="top" secondItem="Wds-AL-CIn" secondAttribute="bottom" constant="8" id="oPR-v0-sVn"/>
+                            <constraint firstItem="Wds-AL-CIn" firstAttribute="top" secondItem="JOX-Vf-bzV" secondAttribute="bottom" constant="8" id="prG-SH-dUn"/>
+                            <constraint firstItem="Ba1-xQ-jIG" firstAttribute="top" secondItem="ogG-F3-g7v" secondAttribute="bottom" constant="8" id="pyq-dy-G3z"/>
+                            <constraint firstItem="6sb-CJ-6tf" firstAttribute="top" secondItem="4zg-At-Dcq" secondAttribute="bottom" constant="20" id="s1X-v5-Wib"/>
+                            <constraint firstItem="vZ2-MM-sl3" firstAttribute="trailing" secondItem="HeB-BP-2ij" secondAttribute="trailing" id="ym8-qB-ZR1"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="260"/>
+                    <connections>
+                        <outlet property="confirm" destination="vZ2-MM-sl3" id="SM6-bR-D0M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cg6-f3-Hfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612.5" y="52"/>
+        </scene>
         <!--Network Selection View Controller-->
         <scene sceneID="Skh-cf-QqF">
             <objects>
@@ -85,6 +179,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FV6-tl-hoF">
                                 <rect key="frame" x="314" y="80" width="51" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="rememberNetworkAction:" destination="fXi-rh-Ziz" eventType="valueChanged" id="xhL-yp-R6e"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <animations/>
@@ -163,7 +260,8 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fXi-rh-Ziz" kind="relationship" relationship="rootViewController" id="bZm-JB-Dty"/>
+                        <segue destination="fXi-rh-Ziz" kind="relationship" relationship="rootViewController" id="s0p-ib-6UL"/>
+                        <segue destination="aMJ-VE-Kqo" kind="show" id="20A-BF-Lc5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOo-yk-eeY" userLabel="First Responder" sceneMemberID="firstResponder"/>

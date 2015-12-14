@@ -11,7 +11,6 @@
 		4A039EDF1C1AD044002F7F83 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A039EDE1C1AD043002F7F83 /* libz.tbd */; };
 		4A039EE11C1AD0A0002F7F83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A039EE01C1AD0A0002F7F83 /* Foundation.framework */; };
 		4A039EE31C1AD13A002F7F83 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A039EE21C1AD13A002F7F83 /* CoreFoundation.framework */; };
-		4A7183A11C1ED919004FDDB3 /* CustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7183A01C1ED919004FDDB3 /* CustomNavController.m */; };
 		4AD153311C1952190088A3BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD153301C1952190088A3BB /* main.m */; };
 		4AD153341C1952190088A3BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD153331C1952190088A3BB /* AppDelegate.m */; };
 		4AD1533A1C1952190088A3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD153381C1952190088A3BB /* Main.storyboard */; };
@@ -28,6 +27,9 @@
 		4AF6346B1C1E96D900C931BF /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6346A1C1E96D900C931BF /* Network.m */; };
 		4AF6346F1C1E996500C931BF /* NetworkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6346E1C1E996500C931BF /* NetworkCell.m */; };
 		4AF634711C1E9A3B00C931BF /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AF634701C1E9A3B00C931BF /* tick.png */; };
+		B67F68401C1F2CA000187D3F /* PJModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F683E1C1F2CA000187D3F /* PJModalView.m */; };
+		B67F68411C1F2CA000187D3F /* PJModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67F683F1C1F2CA000187D3F /* PJModalView.xib */; };
+		B67F68441C1F395300187D3F /* AddNewNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F68431C1F395300187D3F /* AddNewNetworkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +54,6 @@
 		4A039EDE1C1AD043002F7F83 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4A039EE01C1AD0A0002F7F83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A039EE21C1AD13A002F7F83 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		4A71839F1C1ED919004FDDB3 /* CustomNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavController.h; sourceTree = "<group>"; };
-		4A7183A01C1ED919004FDDB3 /* CustomNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavController.m; sourceTree = "<group>"; };
 		4AD1532C1C1952190088A3BB /* EasyTopup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTopup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD153301C1952190088A3BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4AD153321C1952190088A3BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +84,13 @@
 		4AF6346E1C1E996500C931BF /* NetworkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCell.m; sourceTree = "<group>"; };
 		4AF634701C1E9A3B00C931BF /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
 		8C93069BC750A8429970F7FA /* Pods-EasyTopup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTopup.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTopup/Pods-EasyTopup.release.xcconfig"; sourceTree = "<group>"; };
+		B67F68361C1F287B00187D3F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B67F68371C1F28C200187D3F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		B67F683D1C1F2CA000187D3F /* PJModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJModalView.h; sourceTree = "<group>"; };
+		B67F683E1C1F2CA000187D3F /* PJModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJModalView.m; sourceTree = "<group>"; };
+		B67F683F1C1F2CA000187D3F /* PJModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PJModalView.xib; sourceTree = "<group>"; };
+		B67F68421C1F395300187D3F /* AddNewNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewNetworkViewController.h; sourceTree = "<group>"; };
+		B67F68431C1F395300187D3F /* AddNewNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewNetworkViewController.m; sourceTree = "<group>"; };
 		CCBF10D65B80BD1C624E4948 /* Pods-EasyTopup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTopup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTopup/Pods-EasyTopup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,21 +172,14 @@
 				4ADFF60D1C1995F000B1CBE1 /* tessdata */,
 				4AF6346C1C1E973F00C931BF /* Models */,
 				4ADFF6241C19967100B1CBE1 /* Libraries */,
-				4AD153321C1952190088A3BB /* AppDelegate.h */,
-				4AD153331C1952190088A3BB /* AppDelegate.m */,
-				4AF634661C1E94A000C931BF /* NetworkSelectionViewController.h */,
-				4AF634671C1E94A000C931BF /* NetworkSelectionViewController.m */,
-				4AF6346D1C1E996500C931BF /* NetworkCell.h */,
-				4AF6346E1C1E996500C931BF /* NetworkCell.m */,
-				4ADFF62C1C1996EC00B1CBE1 /* OCRController.h */,
-				4ADFF62D1C1996EC00B1CBE1 /* OCRController.m */,
+				B67F68391C1F28CC00187D3F /* App Delegate */,
+				B67F68381C1F28C600187D3F /* Global */,
+				B67F683A1C1F28D900187D3F /* Controllers */,
+				B67F683B1C1F28EF00187D3F /* Custom Cell */,
 				4AD153381C1952190088A3BB /* Main.storyboard */,
-				4A71839F1C1ED919004FDDB3 /* CustomNavController.h */,
-				4A7183A01C1ED919004FDDB3 /* CustomNavController.m */,
 				4AD1533E1C1952190088A3BB /* Assets.xcassets */,
 				4AD153401C1952190088A3BB /* LaunchScreen.storyboard */,
 				4AD153431C1952190088A3BB /* Info.plist */,
-				4AD1533B1C1952190088A3BB /* EasyTopup.xcdatamodeld */,
 				4AD1532F1C1952190088A3BB /* Supporting Files */,
 			);
 			path = EasyTopup;
@@ -214,6 +214,7 @@
 		4ADFF6241C19967100B1CBE1 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B67F683C1C1F2CA000187D3F /* PJModalView */,
 				4ADFF6251C19968300B1CBE1 /* FXBlurView */,
 				4ADFF6281C19968300B1CBE1 /* ImageCropView.h */,
 				4ADFF6291C19968300B1CBE1 /* ImageCropView.m */,
@@ -233,10 +234,61 @@
 		4AF6346C1C1E973F00C931BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4AD1533B1C1952190088A3BB /* EasyTopup.xcdatamodeld */,
 				4AF634691C1E96D900C931BF /* Network.h */,
 				4AF6346A1C1E96D900C931BF /* Network.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		B67F68381C1F28C600187D3F /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				B67F68361C1F287B00187D3F /* PrefixHeader.pch */,
+				B67F68371C1F28C200187D3F /* Constants.h */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		B67F68391C1F28CC00187D3F /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4AD153321C1952190088A3BB /* AppDelegate.h */,
+				4AD153331C1952190088A3BB /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		B67F683A1C1F28D900187D3F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AF634661C1E94A000C931BF /* NetworkSelectionViewController.h */,
+				4AF634671C1E94A000C931BF /* NetworkSelectionViewController.m */,
+				4ADFF62C1C1996EC00B1CBE1 /* OCRController.h */,
+				4ADFF62D1C1996EC00B1CBE1 /* OCRController.m */,
+				B67F68421C1F395300187D3F /* AddNewNetworkViewController.h */,
+				B67F68431C1F395300187D3F /* AddNewNetworkViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B67F683B1C1F28EF00187D3F /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4AF6346D1C1E996500C931BF /* NetworkCell.h */,
+				4AF6346E1C1E996500C931BF /* NetworkCell.m */,
+			);
+			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		B67F683C1C1F2CA000187D3F /* PJModalView */ = {
+			isa = PBXGroup;
+			children = (
+				B67F683D1C1F2CA000187D3F /* PJModalView.h */,
+				B67F683E1C1F2CA000187D3F /* PJModalView.m */,
+				B67F683F1C1F2CA000187D3F /* PJModalView.xib */,
+			);
+			path = PJModalView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +302,6 @@
 				4AD153281C1952190088A3BB /* Sources */,
 				4AD153291C1952190088A3BB /* Frameworks */,
 				4AD1532A1C1952190088A3BB /* Resources */,
-				03FCB93BB69876DD906455DF /* Embed Pods Frameworks */,
 				222EB3B584D8E27ABB23E214 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -348,6 +399,7 @@
 			files = (
 				4AD153421C1952190088A3BB /* LaunchScreen.storyboard in Resources */,
 				4AF634711C1E9A3B00C931BF /* tick.png in Resources */,
+				B67F68411C1F2CA000187D3F /* PJModalView.xib in Resources */,
 				4ADFF60E1C1995F000B1CBE1 /* tessdata in Resources */,
 				4AD1533F1C1952190088A3BB /* Assets.xcassets in Resources */,
 				4AD1533A1C1952190088A3BB /* Main.storyboard in Resources */,
@@ -371,21 +423,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03FCB93BB69876DD906455DF /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTopup/Pods-EasyTopup-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		12F1271BC379EB6C2EF93B20 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,13 +460,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67F68401C1F2CA000187D3F /* PJModalView.m in Sources */,
+				B67F68441C1F395300187D3F /* AddNewNetworkViewController.m in Sources */,
 				4ADFF62B1C19968300B1CBE1 /* ImageCropView.m in Sources */,
 				4AD1533D1C1952190088A3BB /* EasyTopup.xcdatamodeld in Sources */,
 				4ADFF62E1C1996EC00B1CBE1 /* OCRController.m in Sources */,
 				4AF634681C1E94A000C931BF /* NetworkSelectionViewController.m in Sources */,
 				4ADFF62A1C19968300B1CBE1 /* FXBlurView.m in Sources */,
 				4AD153341C1952190088A3BB /* AppDelegate.m in Sources */,
-				4A7183A11C1ED919004FDDB3 /* CustomNavController.m in Sources */,
 				4AF6346B1C1E96D900C931BF /* Network.m in Sources */,
 				4AD153311C1952190088A3BB /* main.m in Sources */,
 				4AF6346F1C1E996500C931BF /* NetworkCell.m in Sources */,
@@ -578,6 +616,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EasyTopup/PrefixHeader.pch;
 				INFOPLIST_FILE = EasyTopup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -596,6 +636,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Narayan Basnet (QH78X3WH4V)";
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EasyTopup/PrefixHeader.pch;
 				INFOPLIST_FILE = EasyTopup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

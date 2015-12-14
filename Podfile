@@ -9,6 +9,7 @@ pod "AFNetworking"
 pod 'IQKeyboardManager'
 pod 'SVProgressHUD'
 pod 'TesseractOCRiOS', '4.0.0'
+pod 'pop', '~> 1.0'
 end
 
 target 'EasyTopupTests' do
