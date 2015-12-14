@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A6DEB31F9D66D0AF7191CC6695D531E8980C944D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A6DEB31F9D66D0AF7191CC6695D531E8980C944D" : 0,
+    "71E85CC76967E990B0798A2964EB81C96CBE24C7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "412CC276-8DC2-4806-B8B8-E8EAD39686D8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A6DEB31F9D66D0AF7191CC6695D531E8980C944D" : "EasyTopup\/",
+    "71E85CC76967E990B0798A2964EB81C96CBE24C7" : "mycage-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EasyTopup",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EasyTopup.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/eepositservices\/mycage-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "71E85CC76967E990B0798A2964EB81C96CBE24C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PrajeetShrestha\/easytopup-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A6DEB31F9D66D0AF7191CC6695D531E8980C944D"
+    }
+  ]
+}
