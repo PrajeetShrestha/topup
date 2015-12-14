@@ -365,7 +365,7 @@
 				TargetAttributes = {
 					4AD1532B1C1952190088A3BB = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = QH78X3WH4V;
+						DevelopmentTeam = 29Z74CE3VM;
 					};
 					4AD153471C1952190088A3BB = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -618,8 +618,8 @@
 			baseConfigurationReference = CCBF10D65B80BD1C624E4948 /* Pods-EasyTopup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -627,9 +627,9 @@
 				INFOPLIST_FILE = EasyTopup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.myCage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.myCage1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cae112f0-933e-456a-a6e5-f9e8e2dc7d0b";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -638,8 +638,8 @@
 			baseConfigurationReference = 8C93069BC750A8429970F7FA /* Pods-EasyTopup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Narayan Basnet (QH78X3WH4V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -647,9 +647,9 @@
 				INFOPLIST_FILE = EasyTopup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.myCage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eeposit.myCage1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cae112f0-933e-456a-a6e5-f9e8e2dc7d0b";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

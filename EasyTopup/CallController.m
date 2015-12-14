@@ -11,7 +11,7 @@
 @implementation CallController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textField.text = _extractedPinCode;
+    self.textField.text = [NSString stringWithFormat:@"%@%@%@",_selectedNetwork.prefix,_extractedPinCode,_selectedNetwork.suffix];;
     self.lblFullNumber.text = [NSString stringWithFormat:@"%@%@%@",_selectedNetwork.prefix,_extractedPinCode,_selectedNetwork.suffix];
     [self.textField addTarget:self
                        action:@selector(textFieldDidChange:)
@@ -19,13 +19,13 @@
 }
 
 - (void)textFieldDidChange:(UITextField *)textField {
-    self.lblFullNumber.text = [NSString stringWithFormat:@"%@%@%@",_selectedNetwork.prefix,_extractedPinCode,_selectedNetwork.suffix];
+    self.lblFullNumber.text = [NSString stringWithFormat:@"%@",_extractedPinCode];
 }
 
 - (IBAction)call:(id)sender {
     //    CallController
     
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",_textField.text]];
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt://%@",_textField.text]];
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
         [[UIApplication sharedApplication] openURL:phoneUrl];

@@ -16,12 +16,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _rememberNetwork.transform = CGAffineTransformMakeScale(0.75, 0.75);
-    _listOfNetwork = [self listOfNetwork];
+    _listOfNetwork = [NSMutableArray new];
+    
+    Network *ntcPostPaid = [Network new];
+    ntcPostPaid.name = @"NTC Post Paid";
+    ntcPostPaid.prefix = @"*411*";
+    ntcPostPaid.suffix = @"*10#";
+    ntcPostPaid.networkID = @"ntcpostpaid";
+    ntcPostPaid.isSelected = NO;
+    [_listOfNetwork addObject:ntcPostPaid];
+    
+    Network *ntcPrePaid = [Network new];
+    ntcPrePaid.name = @"NTC Pre Paid";
+    ntcPrePaid.prefix = @"*411*";
+    ntcPrePaid.suffix = @"*10#";
+    ntcPrePaid.networkID = @"ntcprepaid";
+    ntcPrePaid.isSelected = NO;
+    [_listOfNetwork addObject:ntcPrePaid];
+
     [self setNavigationBar];
 }
 #pragma mark - Private Methods
 - (void)setNavigationBar {
     UIBarButtonItem *doneButton       = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
+    
     UIBarButtonItem *addButton       = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNetwork)];
     self.navigationItem.rightBarButtonItems = @[doneButton,addButton];
 }
@@ -35,6 +53,8 @@
     AddNewNetworkViewController *controller = [findsStory instantiateViewControllerWithIdentifier:@"AddNewNetworkViewController"];
     controller.modalView = popUp;
     [popUp showPopUpWithContainerController:controller];
+    
+    NSLog(@"PopUp %@===FindsStory %@ ==== Controlller %@",popUp,findsStory,controller);
 }
 
 - (void)done {
@@ -52,21 +72,7 @@
 
 - (NSMutableArray *)listOfNetworks {
     NSMutableArray *networks = [NSMutableArray new];
-    Network *ntcPostPaid = [Network new];
-    ntcPostPaid.name = @"NTC Post Paid";
-    ntcPostPaid.prefix = @"*411*";
-    ntcPostPaid.suffix = @"*10#";
-    ntcPostPaid.networkID = @"ntcpostpaid";
-    ntcPostPaid.isSelected = NO;
-    [networks addObject:ntcPostPaid];
-    
-    Network *ntcPrePaid = [Network new];
-    ntcPrePaid.name = @"NTC Pre Paid";
-    ntcPrePaid.prefix = @"*411*";
-    ntcPrePaid.suffix = @"*10#";
-    ntcPrePaid.networkID = @"ntcprepaid";
-    ntcPrePaid.isSelected = NO;
-    [networks addObject:ntcPrePaid];
+
     
     return networks;
 }

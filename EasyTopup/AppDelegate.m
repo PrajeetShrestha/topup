@@ -34,6 +34,7 @@
     _window.rootViewController = navigationController;
     
     [_window makeKeyAndVisible];
+
     return YES;
 }
 

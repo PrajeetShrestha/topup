@@ -101,7 +101,8 @@
 
 -(void)showPopUpWithContainerController:(UIViewController *)containerController
 {
-    UIWindow *window = [[UIApplication sharedApplication]windows][0];
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    UIWindow *window = delegate.window;
 
     backView.frame = window.rootViewController.view.frame;
     
