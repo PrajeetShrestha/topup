@@ -23,18 +23,16 @@
 }
 
 - (IBAction)call:(id)sender {
-    //    CallController
-    
-//    NSString *trimmedString = [_textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"tel://%@",_textField.text]];
-    
-    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
-        [[UIApplication sharedApplication] openURL:phoneUrl];
-        NSLog(@"Can Call");
-    } else
-    {
-        NSLog(@"Can't Call");
-    }
+    UIPasteboard *paseboard = [UIPasteboard generalPasteboard];
+    paseboard.string = _textField.text;
+//    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"tel://%@",_textField.text]];
+//    
+//    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+//        [[UIApplication sharedApplication] openURL:phoneUrl];
+//        NSLog(@"Can Call");
+//    } else
+//    {
+//        NSLog(@"Can't Call");
+//    }
 }
 @end

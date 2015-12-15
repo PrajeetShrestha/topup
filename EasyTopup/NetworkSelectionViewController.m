@@ -16,26 +16,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _rememberNetwork.transform = CGAffineTransformMakeScale(0.75, 0.75);
-    _listOfNetwork = [NSMutableArray new];
+    _listOfNetwork = [Network getListOfNetworks];
     _tableView.tableFooterView = [UIView new];
-    
-    Network *ntcPostPaid = [Network new];
-    ntcPostPaid.name = @"NTC Post Paid";
-    ntcPostPaid.prefix = @"*411*";
-    ntcPostPaid.suffix = @"*10#";
-    ntcPostPaid.networkID = @"ntcpostpaid";
-    ntcPostPaid.isSelected = NO;
-    [_listOfNetwork addObject:ntcPostPaid];
-    
-    Network *ntcPrePaid = [Network new];
-    ntcPrePaid.name = @"NTC Pre Paid";
-    ntcPrePaid.prefix = @"*411*";
-    ntcPrePaid.suffix = @"*10#";
-    ntcPrePaid.networkID = @"ntcprepaid";
-    ntcPrePaid.isSelected = NO;
-    [_listOfNetwork addObject:ntcPrePaid];
-
     [self setNavigationBar];
+    [_rememberNetwork setOn:NO];
 }
 #pragma mark - Private Methods
 - (void)setNavigationBar {

@@ -17,4 +17,6 @@
 @property (nonatomic) CGFloat   order;
 @property (nonatomic) BOOL      isSelected;
 
++ (NSMutableArray *)getListOfNetworks;
++ (Network *)findNetworkWithID:(NSString *)networkID;
 @end

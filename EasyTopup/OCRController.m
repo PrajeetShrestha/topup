@@ -106,7 +106,7 @@
 - (void)showCallDialogWithExtractedPinCode:(NSString *)pinCode {
     
     PJModalView *popUp  = [PJModalView new];
-    popUp.fixedHeight = @246;
+    popUp.fixedHeight = @200;
     popUp.leadingSpaceToSuperView  = @16;
     popUp.trailingSpaceToSuperView = @16;
     CallController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CallController"];
