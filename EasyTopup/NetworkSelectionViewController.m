@@ -17,6 +17,7 @@
     [super viewDidLoad];
     _rememberNetwork.transform = CGAffineTransformMakeScale(0.75, 0.75);
     _listOfNetwork = [NSMutableArray new];
+    _tableView.tableFooterView = [UIView new];
     
     Network *ntcPostPaid = [Network new];
     ntcPostPaid.name = @"NTC Post Paid";
@@ -53,8 +54,6 @@
     AddNewNetworkViewController *controller = [findsStory instantiateViewControllerWithIdentifier:@"AddNewNetworkViewController"];
     controller.modalView = popUp;
     [popUp showPopUpWithContainerController:controller];
-    
-    NSLog(@"PopUp %@===FindsStory %@ ==== Controlller %@",popUp,findsStory,controller);
 }
 
 - (void)done {
@@ -72,8 +71,6 @@
 
 - (NSMutableArray *)listOfNetworks {
     NSMutableArray *networks = [NSMutableArray new];
-
-    
     return networks;
 }
 
