@@ -78,9 +78,20 @@
     // finishes performing recognition on the image
     operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
         // Fetch the recognized text
-        NSString *recognizedText = tesseract.recognizedText;
-        [self showCallDialogWithExtractedPinCode:recognizedText];
-//        [self filterText:recognizedText];
+        NSString *recognizedText = [tesseract.recognizedText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];//tesseract.recognizedText;
+        
+        
+        //Removing Space
+        NSArray *brokenBySpaces=[recognizedText componentsSeparatedByString:@" "];
+        NSMutableString *mergedString = [NSMutableString new];
+        
+        for (NSString *string in brokenBySpaces) {
+            [mergedString appendString:string];
+        }
+        
+        [self showCallDialogWithExtractedPinCode:mergedString];
+        
+        //        [self filterText:recognizedText];
     };
     
     // Display the image to be recognized in the view
@@ -111,7 +122,7 @@
  *  @param tesseract The `G8Tesseract` object performing the recognition.
  */
 - (void)progressImageRecognitionForTesseract:(G8Tesseract *)tesseract {
-   // NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
+    // NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
 }
 
 /**
@@ -157,7 +168,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     controller.delegate = self;
     controller.blurredBackground = YES;
     [self.navigationController pushViewController:controller animated:YES];
-
+    
     
     [self processingStateWithStatusMessage:@"Preparing For Crop"];
 }
